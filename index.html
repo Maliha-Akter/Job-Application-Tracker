@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo | Login</title>
+    <title>Job Tracker</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <!-- tailwind  + Daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="style.css">
     <style>
         * {
             font-family: "Outfit", sans-serif;
@@ -51,17 +51,30 @@
     <hr class="mt-8 mb-8 text-[#E6E7E9]">
 
     <section class="available-job">
-        <h1>Available Jobs</h1>
-        <button>
+        <h1 class="text-2xl font-bold">Available Jobs</h1>
+        <div class="flex gap-4 mt-4">
+            <button onclick="changeKey('All')" id="btn-All" class="rounded-lg p-2 w-20  text-[#64748B] text-sm shadow-sm">
             All
         </button>
-        <button>
+        <button onclick="changeKey('interview')" id="btn-interview" class="rounded-lg p-2 w-20 shadow-sm text-center text-[#64748B] text-sm">
             Interview
         </button>
-        <button>
+        <button onclick="changeKey('rejected')" id="btn-rejected" class="rounded-lg p-2 w-20 shadow-sm text-[#64748B] text-sm">
             Rejected
         </button>
+        </div>
     </section>
-</body>
 
+    <!-- empty state -->
+     <section>
+        <div id="empty-container" class="flex flex-col justify-center items-center hidden">
+            <div>
+                <img src="./image/jobs.png" alt="">
+            </div>
+            <p class="text-2xl font-bold">No jobs available</p>
+            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+        </div>
+     </section>
+</body>
+<script src="./script/index.js"></script>
 </html>
