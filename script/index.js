@@ -35,6 +35,7 @@ AllButton.addEventListener("click", function () {
     allContainer.classList.remove("hidden");
     interviewContainer.classList.add("hidden");
     rejectedContainer.classList.add("hidden");
+    checkEmpty()
 
 })
 
@@ -49,7 +50,7 @@ interviewButton.addEventListener("click", function () {
     interviewContainer.classList.remove("hidden");
     allContainer.classList.add("hidden");
     rejectedContainer.classList.add("hidden");
-
+checkEmpty()
 
 
 })
@@ -64,6 +65,8 @@ rejectedButton.addEventListener("click", function () {
     allContainer.classList.add("hidden");
     interviewContainer.classList.add("hidden");
     rejectedContainer.classList.remove("hidden");
+
+    checkEmpty()
   
 })
 
