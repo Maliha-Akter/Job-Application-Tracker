@@ -4,7 +4,7 @@
 - **getElementById**: it selects **one element** by its `id`.  
 - **getElementsByClassName**: it selects **all elements** with a class. Returns a collection of that class.  
 - **querySelector**: it selects the **first element** matching a CSS selector.  
-- **querySelectorAll**: Selects **all elements** matching a specific CSS selector. Returns a NodeList.  
+- **querySelectorAll**: it selects **all elements** matching a specific CSS selector. Returns a NodeList.  
 
 ## 2. How to create and insert a new element
 
@@ -15,10 +15,10 @@ Example:
 // Creating a new p element as a child
 const p = document.createElement("p");
 
-// Add some text
+// adding some text
 p.innerText = "Hello, world!";
 
-// Insert it into the page, e.g., inside the body
+// Inserting it into the inside of the body
 document.body.appendChild(p);
 
 ## 3. What is Event Bubbling? And how does it work?
