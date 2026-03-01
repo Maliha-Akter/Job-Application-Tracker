@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Login</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <!-- tailwind  + Daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fonts google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+
+
+</head>
+
+<body class="bg-base-200 w-10/12 mx-auto">
+    <header class=" border-1  mt-14">
+        <h1 class="font-bold text-3xl">Job Application Tracker</h1>
+        <section class="flex justify-between items-start pt-5 gap-4">
+            <div class="shadow rounded-xl w-4/12 p-5">
+                <p class="">Total</p>
+                <p class="font-bold text-3xl "><span>0</span></p>
+            </div>
+            <div class="shadow-md rounded-xl w-4/12 p-5">
+                <p>Interview</p>
+                <p class="font-bold text-3xl text-green-600"><span>0</span></p>
+            </div>
+            <div class="shadow rounded-xl w-4/12 p-5">
+                <p>Rejected</p>
+                <p class="font-bold text-3xl text-red-600"><span>0</span></p>
+            </div>
+        </section>
+        
+    </header>
+    <hr class="mt-8 mb-8 text-[#E6E7E9]">
+
+    <section class="available-job">
+        <h1>Available Jobs</h1>
+        <button>
+            All
+        </button>
+        <button>
+            Interview
+        </button>
+        <button>
+            Rejected
+        </button>
+    </section>
+</body>
+
+</html>
