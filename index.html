@@ -30,18 +30,18 @@
 </head>
 
 <body class="bg-base-200 w-10/12 mx-auto">
-    <header class=" border-1  mt-14">
+    <header class=" border-1  mt-14"> 
         <h1 class="font-bold text-3xl">Job Application Tracker</h1>
-        <section class="flex justify-between items-start pt-5 gap-4">
-            <div class="shadow rounded-xl w-4/12 p-5">
+        <section class="grid grid-cols-1 md:grid-cols-3 w-12/12 items-start pt-5 gap-8">
+            <div class="shadow rounded-xl p-5 border border-red-800">
                 <p class="">Total</p>
                 <p class="font-bold text-3xl " id="total-people"><span>0</span></p>
             </div>
-            <div class="shadow-md rounded-xl w-4/12 p-5">
+            <div class="shadow-md rounded-xl  p-5 border border-red-800">
                 <p>Interview</p>
                 <p class="font-bold text-3xl text-green-600" id="total-interview"><span>0</span></p>
             </div>
-            <div class="shadow rounded-xl w-4/12 p-5">
+            <div class="shadow rounded-xl  p-5 border border-red-800">
                 <p>Rejected</p>
                 <p class="font-bold text-3xl text-red-600" id="total-rejected"><span>0</span></p>
             </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="flex gap-4 mt-4">
-            <button onclick="changeKey('All')" id="btn-All"
+            <button  id="btn-All"
                 class="rounded-lg p-2 w-20  text-[#64748B] text-sm shadow-sm">
                 All
             </button>
@@ -79,226 +79,227 @@
     <section id="job-container">
         <section class="mt-4 space-y-6 hidden" id="All-container">
             <!-- Card 1 -->
-            <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+            <div class="card p-8 shadow-sm border border-red-500 ">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">TechNova Solutions</h1>
                         <p class="text-[#64748B] text-xl">Frontend Developer</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>On-site</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$90,000 - $120,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Develop responsive web interfaces using React and Tailwind CSS for enterprise applications.
                         </p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected 
+                                hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="">
-                        <button class="delete border rounded-full p-2" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                    <div class="text-center mt-4" >
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">CloudMatrix Inc</h1>
                         <p class="text-[#64748B] text-xl">DevOps Engineer</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>Remote</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$110,000 - $140,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Manage CI/CD pipelines and cloud infrastructure using AWS and Docker.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                    <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">CyberShield Ltd</h1>
                         <p class="text-[#64748B] text-xl">Cybersecurity Analyst</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>Hybrid</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$95,000 - $130,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Monitor network threats and conduct vulnerability assessments for enterprise clients.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                    <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
             <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">DataSphere AI</h1>
                         <p class="text-[#64748B] text-xl">Machine Learning Engineer</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>Remote</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$120,000 - $160,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Build predictive ML models using Python, TensorFlow, and large-scale datasets.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                   <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 5 -->
             <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">NetCore Systems</h1>
                         <p class="text-[#64748B] text-xl">Backend Developer</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>On-site</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$85,000 - $115,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Develop scalable APIs using Node.js and manage SQL/NoSQL databases.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                   <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 6 -->
             <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">QuantumApps</h1>
                         <p class="text-[#64748B] text-xl">Mobile App Developer</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>Remote</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                           <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$100,000 - $135,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Create high-performance Android and iOS apps using Flutter.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                    <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 7 -->
-            <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+            <div class="card p-8 shadow-sm border border-red-500 flex justify-between ">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">SecureLink Corp</h1>
                         <p class="text-[#64748B] text-xl">Network Engineer</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>On-site</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$88,000 - $118,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Maintain enterprise network infrastructure and ensure high security standards.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                    <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
 
             <!-- Card 8 -->
             <div class="card p-8 shadow-sm border border-red-500 flex justify-between">
-                <div class="flex justify-between gap-20">
-                    <div class="border border-red-500">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="border border-red-500 text-center md:text-start">
                         <h1 class="text-2xl font-bold">AI Horizon</h1>
                         <p class="text-[#64748B] text-xl">Data Scientist</p>
-                        <div class="flex gap-8 text-[#64748B] pt-4">
+                        <div class="flex flex-col gap-4 md:gap-8 text-[#64748B] pt-4 md:flex-row" >
                             <p>Hybrid</p>
-                            <ul class="flex gap-8" style="list-style-type: disc;">
+                            <ul class="flex gap-6  md:flex-row md:gap-8 " style="list-style-type: disc;">
                                 <li>Full-time</li>
                                 <li>$115,000 - $155,000</li>
                             </ul>
                         </div>
-                        <div class="apply">Not Applied</div>
+                        <div class="apply p-2 border-gray-100 bg-blue-100 w-3/12 rounded-lg text-center font-bold">Not Applied</div>
                         <p>Analyze large datasets and build AI-driven business intelligence solutions.</p>
                         <div class="flex gap-3">
                             <button
-                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview">INTERVIEW</button>
+                                class="text-green-500 border border-green-500 p-2 rounded-lg font-bold interview hover:bg-green-600 hover:text-white">INTERVIEW</button>
                             <button
-                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected">REJECTED</button>
+                                class="text-red-500 border border-red-400 p-2 rounded-lg font-bold rejected hover:bg-red-600 hover:text-white">REJECTED</button>
                         </div>
                     </div>
-                    <div class="border border-blue-500">
-                        <button class="delete" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                    <div class="  text-center mt-4">
+                        <button class="delete border border-blue-500 rounded-full p-3" ><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>

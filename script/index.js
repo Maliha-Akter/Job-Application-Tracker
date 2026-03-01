@@ -18,6 +18,7 @@ const TotalRejected = document.getElementById("total-rejected")
 // initially all button and card selected
 AllButton.classList.add("blue-btn");
 allContainer.classList.remove("hidden");
+TotalPeople.innerText = allContainer.children.length;
 
 // header part
 // TotalPeople.innerText = allContainer.children.length;
