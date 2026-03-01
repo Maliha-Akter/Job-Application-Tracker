@@ -1,4 +1,4 @@
-# JavaScript DOM & Event Questions - Simple Answers
+# Questions & Answers
 
 ## 1. Difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll
 - **getElementById**: it selects **one element** by its `id`.  
